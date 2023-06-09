@@ -1,35 +1,6 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <script src="https://kit.fontawesome.com/9fd1a302e2.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header class="fixed-top" id="header">
-        <nav class="navbar">
-            <div class="container-fluid text-secondary-emphasis">
-              <a class="navbar-brand"><strong>COFFEELAND</strong>
-                <i class="fa-solid fa-mug-hot"></i>
-              </a>
-              <ul class="nav nav-underline justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" aria-current="page" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="./views/menu.html">Menu</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="./views/booking.html">Booking</a>
-                </li>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="container container-fluid" id="sectionAboutUs">
+@extends('layouts.app')
+@section('content')
+<section class="container container-fluid" id="sectionAboutUs">
           <div class="btn-group-vertical">
             <a href="#sectionAboutUs" class="btn btn-light active" aria-current="page">About us</a>
             <a href="#sectionSchedule" class="btn btn-light">Schedule</a>
@@ -110,16 +81,5 @@
             <p><h2 class="locationText">Location</h2><br><h3 class="locationText">La Calera, Bogotá <i class="fa-solid fa-location-dot"></i></h3></p>
           </article>
         </section>
-    </main>
-    <footer class="footer container-fluid">
-      <div class="footerItems"><i class="fa-regular fa-envelope"></i> cflbog@gmail.com 
-      </div>
-      <div class="footerItems"><i class="fa-solid fa-phone"></i> 3108935224
-      </div>
-      <div class="footerItems"><i class="fa-brands fa-facebook-f"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-instagram"></i>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>    
-    <script src="./scripts/app.js"></script>
-  </body>
-</html>
+
+@endsection
