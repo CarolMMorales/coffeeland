@@ -35,16 +35,13 @@
                 <i class="fa-solid fa-mug-hot"></i>
               </a>
               <ul class="nav nav-underline justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" aria-current="page" href="route('home')">Home</a>
-                </li>
                 @if (Auth::user()->name == "admin")
                 <li class="nav-item">
-                  <a class="nav-link text-secondary" href="route('orders.index')">Ordenes</a>
+                  <a class="nav-link text-secondary" href="{{route('orders.index')}}">Ordenes</a>
                 </li>                
                 @endif
                 <li class="nav-item">
-                  <a class="nav-link text-secondary" href="route('products')">Productos</a>
+                  <a class="nav-link text-secondary" href="{{route('products.index')}}">Productos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-secondary" href="{{ route('logout') }}"
