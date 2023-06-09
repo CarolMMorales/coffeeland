@@ -36,23 +36,24 @@
               </a>
               <ul class="nav nav-underline justify-content-end">
                 <li class="nav-item">
-                  <a class="nav-link text-secondary" aria-current="page" href="./index.html">Home</a>
+                  <a class="nav-link text-secondary" aria-current="page" href="route('home')">Home</a>
+                </li>
+                @if (Auth::user()->name == "admin")
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="route('orders.index')">Ordenes</a>
+                </li>                
+                @endif
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="route('products')">Productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-secondary" href="./views/menu.html">Menu</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="./views/booking.html">Booking</a>
-                </li>
-            </div>
-
-
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                  <a class="nav-link text-secondary" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
+                </li>
+            </div>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>

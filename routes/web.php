@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+Route::get('/', function () {return redirect('login');});
 Auth::routes();
-Route::get('/prueba', function () {
 
-    return view('user.show');
+Route::get('/prueba', function()
+{
+    return view('user.index');
 });
+
+Route::resource('/products', ProductController::class)->names('products');
+Route::resource('/orders', OrderController::class)->names('orders');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
