@@ -16,7 +16,9 @@ use App\Http\Controllers\OrderController;
 */
 
 
-Route::get('/', function () {return redirect('login');});
+Route::get('/', function () {
+    return view('user.index');
+});
 Auth::routes();
 
 Route::get('/prueba', function()
