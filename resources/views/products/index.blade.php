@@ -3,11 +3,11 @@
 <div class="container">
     @if (Auth::user()->name=="admin")
     <div class="row container col-sm-3">
-        <a name="" id="" class="btn btn-success float-end" href="{{route('products.create')}}" role="button">Crear Producto</a>
+        <a name="" id="" class="btn btn-outline-success float-center mb-3" href="{{route('products.create')}}" role="button">Crear Producto</a>
     </div>
     @else
     <div class="row container col-sm-3">
-        <a name="" id="" class="btn btn-success float-end" href="{{route('orders.create')}}" role="button">Crear Orden</a>
+        <a name="" id="" class="btn btn-outline-secondary float-center mb-3" href="{{route('orders.create')}}" role="button">Ordenar</a>
     </div>
     @endif
     <div class="table-responsive">
