@@ -14,28 +14,19 @@ use App\Http\Controllers\OrderController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Auth::routes();
 
 Route::get('/', function () {
     return view('user.index');
 });
-Auth::routes();
+
 
 Route::get('/prueba', function()
 {
-    return view('user.index');
+    return view('products.show');
 });
 
 Route::resource('/products', ProductController::class)->names('products');
 Route::resource('/orders', OrderController::class)->names('orders');
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

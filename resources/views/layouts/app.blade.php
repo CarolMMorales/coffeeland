@@ -53,14 +53,14 @@
                     @if (Auth::user()->name == "admin")
                     <li class="nav-item">
                       <a class="nav-link text-secondary" href="{{route('orders.index')}}">Ordenes</a>
-                    </li>                
+                    </li>
                     @endif
-                    
-                    
+
+
                     <li class="nav-item">
                       <a class="nav-link text-secondary" href="{{route('products.index')}}">Productos</a>
                     </li>
-                    
+
                     <li class="nav-item">
                       <a class="nav-link text-secondary" href="{{ route('logout') }}" onclick="event.preventDefault();
                       document.getElementById('logout-form').submit();">
@@ -79,7 +79,7 @@
             @yield('content')
         </main>
     </div>
-    <footer class="footer container-fluid fixed-bottom">
+    <footer class="footer container-fluid fixed-bottom mt-lg-5">
         <div class="footerItems"><i class="fa-regular fa-envelope"></i> cflbog@gmail.com
         </div>
         <div class="footerItems"><i class="fa-solid fa-phone"></i> 3108935224

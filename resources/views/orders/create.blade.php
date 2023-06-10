@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <div class="card text-white bg-light">
+        <h2 class="text-center ">Indicanos tu orden</h2>
+        <div class="card text-dark bg-light mb-5 mt-2">
           <div class="card-body text-dark">
-            <h4 class="card-title ">Creacion de Orden</h4>
             <form action="{{route('orders.store')}}" method="POST">
                 <input type="hidden" name="id_user" value="{{Auth::user()->id}}">
                 @csrf
@@ -28,9 +28,8 @@
                     <label for="" class="form-label">Metodo de Pago:</label>
                     <input type="text" class="form-control" id="" name="payment_method">
                   </div>
-                <button type="submit" class="btn btn-primary mt-3">Crear</button>
+                <button type="submit" class="btn btn-outline-secondary mt-3 aling-center">Ordenar</button>
               </form>
-        
           </div>
         </div>
        </div>

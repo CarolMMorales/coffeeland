@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <div class="card text-white bg-light">
+        <h2 class="text-center">Editar productos</h2>
+        <div class="card text-dark bg-light">
           <div class="card-body text-dark">
-            <h4 class="card-title ">Creacion de productos</h4>
             <form action="{{route('products.update', $product->id)}}" method="POST">
                 @csrf
                 @method('PUT')
@@ -26,9 +26,9 @@
                     <input type="number" class="form-control" value="{{$product->price}}" name="price">
                     <span class="input-group-text">.000</span>
                   </div>
-                <button type="submit" class="btn btn-primary mt-3">Crear</button>
+                <button type="submit" class="btn btn-outline-success mt-3">Guardar</button>
               </form>
-        
+
           </div>
         </div>
        </div>
