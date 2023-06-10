@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="container container-fluid" id="sectionAboutUs">
+<section class="container container-fluid d-flex justify-content-evenly d-flex align-items-center" id="sectionAboutUs">
           <div class="btn-group-vertical">
             <a href="#sectionAboutUs" class="btn btn-light active" aria-current="page">About us</a>
             <a href="#sectionSchedule" class="btn btn-light">Schedule</a>
@@ -32,6 +32,7 @@
                 <p>The latest tendency in Colombian coffee shops!</p>
             </article>
         </section>
+        <br>
         <section class="container2 container-fluid" id="sectionSchedule">
             <article class="article" id="articleSchedule">
                 <p><h2 id="schedules">Schedule <i class="fa-regular fa-clock"></i></h2></p>
