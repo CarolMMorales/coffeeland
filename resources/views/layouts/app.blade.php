@@ -35,11 +35,14 @@
                     <i class="fa-solid fa-mug-hot"></i>
                   </a>
                   <ul class="nav nav-underline justify-content-end">
+                    @auth
                     @if (Auth::user()->name == "admin")
                     <li class="nav-item">
                       <a class="nav-link text-secondary" href="{{route('orders.index')}}">Ordenes</a>
                     </li>                
                     @endif
+                    
+                    
                     <li class="nav-item">
                       <a class="nav-link text-secondary" href="{{route('products.index')}}">Productos</a>
                     </li>
@@ -52,6 +55,7 @@
       @csrf
   </form>
 </li>
+@endauth
 </div>
 </div>
 </header>
