@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
-use App\Models\Product;
 
 class HomeController extends Controller
 {
@@ -26,12 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        if ($user->email = "admin@gmail.com") {
-            return redirect(route('orders.index'));
-        }else {
-            return redirect(route('products.index'));
-        }
-        
+        return view('home');
     }
 }
