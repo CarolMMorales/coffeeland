@@ -11,7 +11,7 @@
     </div>
     @endif
     <div class="table-responsive">
-        <table class="table table-dark">
+        <table class="table table-light">
             <thead>
                 <tr>
                     <th scope="col">Nombre</th>
@@ -30,22 +30,22 @@
                     <td>${{$product->price}}.000</td>
                     @if (Auth::user()->name=="admin")
                     <td>
-                        <div class="btn-group" role="group" aria-label="">
-                            <a name="" id="" class="btn btn-primary" href="{{route('products.show', $product->id)}}" role="button">Detalles</a>
+                        <div class="btn-group mx-2" role="group" aria-label="">
+                            <a name="" id="" class="btn btn-outline-secondary" href="{{route('products.show', $product->id)}}" role="button">Detalles</a>
                             <form action="{{route('products.destroy', $product->id)}}" method="post">
                                 @csrf
                     @method('DELETE')
-                            <input type="submit" class="btn btn-danger" value="Eliminar">
+                            <input type="submit" class="btn btn-outline-danger" value="Eliminar">
                             </form>
                         </div>
                     </td>
                     @endif
-                    
+
                 </tr>
                 @endforeach
-                
+
             </tbody>
         </table>
     </div>
-</div>    
+</div>
 @endsection

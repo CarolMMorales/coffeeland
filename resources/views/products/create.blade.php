@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <div class="card text-white bg-light">
+        <h2 class="text-center">Creacion de productos</h2>
+        <div class="card text-dark bg-light">
           <div class="card-body text-dark">
-            <h4 class="card-title ">Creacion de productos</h4>
             <form action="{{route('products.store')}}" method="POST">
                 @csrf
                 <div class="mb-3 mt-3">
@@ -25,9 +25,9 @@
                     <input type="number" class="form-control" name="price">
                     <span class="input-group-text">.000</span>
                   </div>
-                <button type="submit" class="btn btn-primary mt-3">Crear</button>
+                <button type="submit" class="btn btn-outline-success mt-3">Crear</button>
               </form>
-        
+
           </div>
         </div>
        </div>
