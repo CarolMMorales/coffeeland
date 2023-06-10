@@ -1,9 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+    @if (Auth::user()->name=="admin")
     <div class="row container col-sm-3">
         <a name="" id="" class="btn btn-success float-end" href="{{route('products.create')}}" role="button">Crear Producto</a>
     </div>
+    @endif
     <div class="table-responsive">
         <table class="table table-dark">
             <thead>

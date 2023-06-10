@@ -29,7 +29,7 @@
 <body>
     <div id="app">
         <header>
-            <div class="navbar">
+            <div class="navbar ">
                 <div class="container-fluid text-secondary-emphasis">
                   <a class="navbar-brand"><strong>COFFEELAND</strong>
                     <i class="fa-solid fa-mug-hot"></i>
