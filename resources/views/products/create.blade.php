@@ -13,7 +13,7 @@
                 <div class="mb-3">
                     <label for="" class="form-label">Tamaño:</label>
                     <select class="form-select form-select-lg" name="size" id="">
-                        <option value="null" selected>Seleccione tañamo</option>
+                        <option value="null" selected>Seleccione tamaño</option>
                         <option value="s">s</option>
                         <option value="m">m</option>
                         <option value="l">l</option>
